@@ -1,0 +1,98 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 20px;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(rgb(226, 55, 55), rgb(68, 68, 252));
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.back {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.pics {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pics:hover {
+  transform: scale(1.1);
+}
+
+.card p {
+  margin: 5px;
+  text-align: center;
+}
+
+.price-label {
+  color: rgb(32, 153, 32);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.add-to-cart,
+.remove-from-cart {
+  background-color: #ffa500;
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 15px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.remove-from-cart {
+  background-color: #ff4500;
+}
+
+.iname,
+.idesc {
+  font-weight: bold;
+}
+
+.out-of-stock {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.msg {
+  font-weight: bold;
+  font-size: 20px;
+}
